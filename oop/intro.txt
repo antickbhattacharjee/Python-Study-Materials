@@ -1,0 +1,115 @@
+Object-Oriented Programming (OOP) in Python
+
+1. What is OOP?
+- OOP is a programming paradigm based on classes and objects.
+- It models real-world entities using objects that have attributes (data) and behaviors (methods).
+- Python supports OOP with built-in class syntax and dynamic typing.
+
+2. Core concepts of OOP
+- Class: A blueprint for creating objects. It defines attributes and methods.
+- Object: An instance of a class. It holds specific data and can perform actions defined by its class.
+- Encapsulation: Bundling data and methods together, and restricting direct access to internal state.
+- Inheritance: A class can inherit attributes and methods from another class, promoting code reuse.
+- Polymorphism: Different classes can provide the same method interface, so objects can be used interchangeably.
+- Abstraction: Hiding complex implementation details and exposing only the necessary interface.
+
+3. Python class basics
+- Define a class using the `class` keyword.
+- Use `def __init__(self, ...)` to define the constructor and initialize instance attributes.
+- `self` refers to the current object instance.
+- Example:
+  class Person:
+      def __init__(self, name, age):
+          self.name = name
+          self.age = age
+
+      def greet(self):
+          print(f"Hello, my name is {self.name}.")
+
+4. Instance and class variables
+- Instance variables are unique to each object, usually defined with `self.attribute`.
+- Class variables are shared by all instances and defined directly in the class body.
+- Example:
+  class Car:
+      wheels = 4  # class variable
+
+      def __init__(self, make):
+          self.make = make  # instance variable
+
+5. Encapsulation in Python
+- Use single underscore `_attribute` to indicate protected/internal use.
+ - Use double underscore `__attribute` for name mangling to reduce accidental access.
+- Provide getter and setter methods or use `@property` for controlled access.
+- Example:
+  class BankAccount:
+      def __init__(self, balance):
+          self.__balance = balance
+
+      @property
+      def balance(self):
+          return self.__balance
+
+      def deposit(self, amount):
+          if amount > 0:
+              self.__balance += amount
+
+6. Inheritance
+- A child class inherits from a parent class using parentheses: `class Child(Parent):`
+- The child class can override parent methods or extend them.
+- Use `super()` to call parent class methods.
+- Example:
+  class Animal:
+      def speak(self):
+          pass
+
+  class Dog(Animal):
+      def speak(self):
+          return "Woof"
+
+7. Polymorphism
+- Polymorphism allows different object types to be used through the same interface.
+- Common technique: define methods with the same name in multiple classes.
+- Example:
+  def make_sound(animal):
+      print(animal.speak())
+
+8. Abstraction
+- Abstract classes define methods that must be implemented by subclasses.
+- Python provides `abc` module with `ABC` and `@abstractmethod`.
+- Example:
+  from abc import ABC, abstractmethod
+
+  class Shape(ABC):
+      @abstractmethod
+      def area(self):
+          pass
+
+9. Common OOP patterns in Python
+- Composition: objects contain other objects for reusable components.
+- Delegation: an object forwards tasks to another object.
+- Mixins: small classes that provide reusable behavior to multiple classes.
+
+10. Practical benefits of OOP
+- Improves code organization and maintainability.
+- Makes it easier to model complex real-world systems.
+- Encourages reuse and extension through inheritance and composition.
+- Helps keep state and behavior together.
+
+11. Python-specific notes
+- Python classes are dynamic: attributes can be added at runtime.
+- Everything in Python is an object, including functions and classes.
+- Special methods like `__str__`, `__repr__`, `__eq__`, and `__len__` allow objects to integrate with language features.
+- Example:
+  class Point:
+      def __init__(self, x, y):
+          self.x = x
+          self.y = y
+
+      def __repr__(self):
+          return f"Point({self.x}, {self.y})"
+
+12. Summary
+- OOP in Python uses classes and objects to model data and behavior.
+- Encapsulation, inheritance, polymorphism, and abstraction are key principles.
+- Python's syntax is flexible and supports OOP idioms naturally.
+- Use OOP to structure larger programs and make them easier to extend and maintain.

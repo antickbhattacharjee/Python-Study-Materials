@@ -1,0 +1,48 @@
+📘 What is Python?
+Python is a high-level, interpreted programming language.
+
+Designed for readability and simplicity.
+
+Developed by Guido van Rossum, released in 1991.
+
+It supports multiple programming paradigms: procedural, object-oriented, and functional.
+
+🧠 Features of Python
+Easy to learn and use
+
+Open-source
+
+Cross-platform
+
+Large standard library
+
+Dynamic typing
+
+Used in web dev, data science, automation, AI, etc.
+
+🛠️ Installing Python
+Download from https://www.python.org
+
+Make sure to check "Add Python to PATH" during installation.
+
+🧰 IDE Options:
+IDLE (comes with Python)
+
+VS Code (recommended)
+
+Jupyter Notebook (great for data science)
+
+🧰 Just type python in your terminal and use it interactively:
+
+python
+Copy
+Edit
+>>> 5 + 7
+12
+>>> print("Hi")
+Hi
+
+'''
+This is a
+multi-line comment
+'''

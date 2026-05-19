@@ -1,0 +1,80 @@
+1. What is a Loop?
+    A loop is a programming construct that allows a block of instructions 
+    to be executed repeatedly until a certain condition is met. 
+    Loops help avoid repetition, making programs efficient and easier to maintain.
+
+2. Why Loops Are Used
+    Loops are used to:
+        > Perform repetitive tasks automatically.
+        > Avoid writing the same code multiple times.
+        > Handle tasks where the number of repetitions is not fixed.
+        > Improve program efficiency and readability.
+        > Process large datasets or sequences.
+
+3. How Loops Work
+    The working of a loop involves:
+        > Checking a condition to decide whether to execute the block.
+        > Executing the block of code if the condition is True.
+        > Rechecking the condition after execution.
+        > Repeating steps 2–3 until the condition becomes False.
+        > Exiting the loop and passing control to the next statement after the loop.
+
+4. Types of Loops in Python
+    for Loop –
+        > Iterates over a sequence (list, string, tuple, range).
+        > Best used when the number of iterations is known.
+
+    while Loop –
+        > Executes repeatedly as long as a condition is True.
+        > Best used when the number of iterations is not known in advance.
+
+5. Components of a Loop
+    A loop consists of:
+        > Initialization – Setting starting value or counter.
+        > Condition – Determines whether the loop will continue.
+        > Body – Statements executed repeatedly.
+        > Updation – Modifying the loop variable so the condition can eventually become False.
+
+6. Loop with Condition
+    > Loops continue while the condition is True.
+    > In while loops, the condition is explicitly checked.
+    > In for loops, the condition is implicitly based on the number of items in the sequence.
+
+7. Loop Control: break and continue
+    break Statement –
+        > Terminates the loop immediately.
+        > Useful when a specific condition occurs, and further iterations are unnecessary.
+
+    continue Statement –
+        > Skips the current iteration and moves to the next iteration.
+        > Useful when some iterations need to be ignored based on a condition.
+
+8. Loop with else
+    Python allows an else block with loops. The else block is executed only when the loop completes normally, 
+    i.e., not terminated by break.
+
+    for ... else
+        > Executes the else block after iterating over all items in the sequence.
+        > Skipped if the loop is terminated using break.
+
+    while ... else
+        > Executes the else block after the condition becomes False.
+        > Skipped if the loop is terminated using break.
+
+    Purpose of else in loops:   
+        Often used to check whether a loop completed fully or was terminated prematurely.
+
+9. Summary
+    > Loops allow repetition and make programs efficient.
+    > Python has two main types: for and while.
+    > Components of a loop: initialization, condition, body, updation.
+    > Loop control: break (exit loop) and continue (skip iteration).
+    > else with loops runs only if the loop completes normally, not if break is used.
+    > Loops are essential for automation, data processing, and algorithm development.
+
+
+| `range(start, stop, step)` | Example             | Output    |
+| -------------------------- | ------------------- | --------- |
+| `range(5)`                 | `range from 0 to 4` | 0,1,2,3,4 |
+| `range(1, 6)`              | `1 to 5`            | 1,2,3,4,5 |
+| `range(1, 10, 2)`          | `odd numbers`       | 1,3,5,7,9 |

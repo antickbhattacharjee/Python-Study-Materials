@@ -1,0 +1,1 @@
+print("Hello".find("z")) # Returns -1 because "z" is not found in "Hello"

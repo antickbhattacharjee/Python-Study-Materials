@@ -1,0 +1,32 @@
+Q1: Shopping Cart Function
+Question:
+Write a Python function shopping_cart(customer_name, *items, discount=0) that:
+
+Takes customer name (string).
+
+Accepts any number of items as ("item_name", price) tuples.
+
+Applies discount (if given).
+
+Returns the final bill amount.
+
+Output:
+Customer: Alice, Final Bill: ₹315.00
+Customer: Bob, Final Bill: ₹51000.00
+
+
+Q2: Prime Number Checker
+
+Question:
+Write a Python function is_prime(n) that returns True if the number n is prime, otherwise returns False.
+
+Output:
+7 is Prime
+
+Q3: Fibonacci Series
+
+Question:
+Write a Python function fibonacci(n) that prints the first n terms of the Fibonacci series.
+
+Output:
+0 1 1 2 3 5 8 13 21 34

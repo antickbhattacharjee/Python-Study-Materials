@@ -1,0 +1,34 @@
+Python Programming Project Question
+
+Q.
+You are required to create a simple Bank Account Management System using Python.
+
+Task 1: Database Setup
+    Write a Python script to create a database (you may use SQLite or MySQL) to store bank account information.
+    Your table must include the following fields:
+
+    Field Name      Description
+    account_no      Unique account number for each user
+    balance         Current account balance
+    user_id         Username for login
+    password        Password for login
+
+    Insert at least 3 sample customer records into the database.
+
+Task 2: ATM System
+    Write another Python script to act as an ATM interface.
+    The system must:
+    Ask the user to log in using user_id and password.
+    Once logged in, show the menu:
+
+    1. Check Balance
+    2. Deposit Amount
+    3. Withdraw Amount
+    4. View Transaction History
+    5. Exit
+
+
+Perform the operations by interacting with the same database created in Task 1.
+Ensure that:
+Withdrawal is only allowed if there is sufficient balance.
+All deposit and withdrawal actions must be recorded in a Transaction History Table.

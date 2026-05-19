@@ -1,0 +1,28 @@
+🔤 What is a String?
+A string is a sequence of characters enclosed in quotes.
+name = "Python"
+
+Strings can be defined with single (') or double (") quotes.
+Multi-line strings use triple quotes (''' or """).
+text = """This is
+a multi-line
+string."""
+
+| Operation	| Syntax		|Example		|Result 	|
+| --------------- 	| -------------- 	| --------------- 	| ------- 	|
+| Access char	|      s[i]		|   "Python"[0]	|   'P'	|
+| Negative index 	|     s[-1]		|  "Python"[-1]	|   'n'   	|
+| Slice substring 	|  s[start:end]  	|  "Python"[1:4]  	|  'yth'  	|
+| Step in slicing 	|     s[::2]     	|  "Python"[::2]  	|  'Pto'  	|
+[start:end:jump]
+[1:len(a):]
+| Method	| Description			| Example			|
+| --------------- 	| -------------------------------- 		| -------------------------------------- 		|
+| `lower()`       	| Converts to lowercase           	| `"HELLO".lower()` → `"hello"`	|
+| `upper()`       	| Converts to uppercase          		| `"hello".upper()` → `"HELLO"`	|
+| `strip()`       	| Removes whitespace             		| `"  hi  ".strip()` → `"hi"`            	|
+| `replace(a, b)` 	| Replace substring `a` with `b`   	| `"Java".replace("J", "P")` → `"Pava"`   |
+| `split()`       	| Splits string into list          		| `"a,b,c".split(",")` → `['a','b','c']` 	|
+| `find()`        	| Finds first index of a substring 	| `"hello".find("e")` → `1`              	|
+| `len()`         	| Returns length of string         	| `len("hi")` → `2`                      		|
+

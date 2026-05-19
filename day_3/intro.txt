@@ -1,0 +1,9 @@
+🔧 Types of Operators in Python
+Type	                                    Operators	                                        Example
+Arithmetic	                            +, -, *, /, //, %, **	                                 a + b
+Relational	                             ==, !=, >, <, >=, <=	                                 x > y
+Logical	                                   and, or, not	                                x > 10 and x < 20
+Assignment	                          =, +=, -=, *=, /=, //=, **=	                             x += 5
+Bitwise (Intro)	                          &, `, ^, <<, >>                               5 & 3, 5 ^ 3, 5 >> 1
+Membership	                                in, not in	                                     'a' in 'apple'
+Identity	                                is, is not	                                         x is y

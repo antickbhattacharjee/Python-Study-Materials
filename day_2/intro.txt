@@ -1,0 +1,17 @@
+🧠 What is a Variable?
+-> A variable is a name that refers to a value stored in memory.
+-> Python is dynamically typed — you don’t declare data types explicitly.
+
+🔢 Basic Data Types
+Type                Example             Description
+int	5,               -100	           Integer values
+float	           3.14, -0.01	    Decimal (floating point)
+str	                "Hello"	            Text (string)
+bool	           True, False	    Boolean (logical value)
+
+
+📌 Naming Rules for Variables
+Must begin with a letter or _
+Cannot start with a digit
+Case-sensitive: Name and name are different
+Avoid using Python keywords (if, for, class, etc.)

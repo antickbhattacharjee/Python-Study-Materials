@@ -1,0 +1,6 @@
+| Mode | Description             |
+| ---- | ----------------------- |
+| `r`  | Read (default)          |
+| `w`  | Write (overwrites file) |
+| `a`  | Append                  |
+| `r+` | Read and write          |

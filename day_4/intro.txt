@@ -1,0 +1,12 @@
+🔎 What are Conditional Statements?
+Conditional statements allow programs to make decisions and execute different code 
+depending on the conditions.
+
+⚙️ Logical Operators in Conditions
+and – True if both conditions are true
+or – True if at least one is true
+not – Inverts the condition
+
+⚠️ Things to remember
+Don’t forget the colon (:) at the end of if, elif, else
+Indentation is mandatory in Python (usually 4 spaces)

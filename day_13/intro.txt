@@ -1,0 +1,96 @@
+🧠 Theory of API (Application Programming Interface)
+📌 1. What is an API?
+API is a set of rules that allows two applications to communicate with each other.
+	>> Think of it as a menu in a restaurant:
+	>> The menu provides a list of dishes (API endpoints).
+	>> You (client) request a dish (API call).
+	>> The kitchen (server) prepares and serves the dish (response).
+
+📌 2. Types of APIs
+| Type		| Description 				| Examples                 	|
+| -------		| ----------------				| ------------------------ 		|
+| Web API	| Communicates over the web using HTTP	| REST, SOAP, GraphQL      	|
+| Library API	| Functions you can use from a software library 	| NumPy, TensorFlow        	|
+| OS API		| Interfaces provided by the OS                 	| Windows API, Android SDK 	|
+| Hardware API	| Used to interact with hardware devices        	| USB, Bluetooth APIs      	|
+
+📌 3. Web API Components (REST API Focus)
+| Component 	| Description					|
+| --------------- 	| ----------------------------------------------------			|
+| Endpoint    	| A specific URL to access resources (e.g. `/users`)		|
+| Method      	| HTTP method (GET, POST, PUT, DELETE, PATCH) 		|
+| Request     	| The message you send to the server                     		|
+| Response    	| The message (usually JSON) returned from the server    	|
+| Status Code 	| Numeric code indicating success/failure (e.g., 200 OK) 	|
+
+📌 4. Common HTTP Methods
+| Method	| Action		| Description		|
+| -------- 		| -------------- 	| ----------------------- 		|
+| `GET`    		| Read           	| Fetch data              		|
+| `POST`   	| Create         	| Submit new data		|
+| `PUT`    		| Update         	| Replace existing data   	|
+| `PATCH`  	| Partial Update 	| Update part of the data 	|
+| `DELETE` 	| Delete         	| Remove data             	|
+
+📌 5. HTTP Status Codes
+| Code 	| Meaning		| Description 			|
+| ---- 	| --------------------- 		| ------------------			|
+| 200  	| OK                    		| Success                         		|
+| 201  	| Created               		| Resource successfully created   	|
+| 400  	| Bad Request       		| Invalid input or request syntax	|
+| 401  	| Unauthorized 		| Requires authentication         	|
+| 403  	| Forbidden             		| You don’t have permission       	|
+| 404  	| Not Found             	| Resource not available          	|
+| 500  	| Internal Server Error 	| Server crashed or malfunctioned 	|
+
+📌 6. Data Formats
+Most APIs use:
+    JSON (JavaScript Object Notation) → Lightweight, human-readable.
+    XML → Less common now.
+Example JSON Response:
+    {
+        "id": 1,
+        "name": "Antick",
+        "role": "Trainer"
+    }
+
+📌 7. API Client Tools
+    o Postman – for testing APIs without writing code.
+    o curl – command-line tool for making requests.
+    o Python (requests) – for programming interaction with APIs.
+
+📌 8. Authentication Types in APIs
+| Type		| Description                       		|
+| ---------- 		| --------------------------------- 		|
+| No Auth	| Public APIs, open access          	|
+| API Key		| Pass a key in header/query        	|
+| OAuth 2.0	| Token-based login, secure         	|
+| JWT		| JSON Web Token, stateless session 	|
+| Basic Auth	| Username & password in request    	|
+
+📌 9. REST vs SOAP vs GraphQL
+| Feature		| REST             		| SOAP              	| GraphQL                 		|
+| ---------- 		| ---------------- 		| ----------------- 	| ----------------------- 		|
+| Format     	| JSON (mostly)    		| XML               	| JSON                    		|
+| Speed      	| Faster           		| Slower            	| Fast & flexible         	|
+| Simplicity 	| Easy             		| Complex           	| Very Developer Friendly 	|
+| Use Case   	| Most modern APIs 	| Legacy/Enterprise| Data-heavy modern apps  	|
+
+📌 10. Why Use APIs?
+    1. Integrate different software systems
+    2. Use external services (weather, maps, social login)
+    3. Enable microservices communication
+    4. Power mobile apps and frontends
+
+📌 11. Best Practices for API Consumers
+    1. Always handle errors (try-except, check status codes)
+    2. Use API documentation
+    3. Don't expose keys in frontend apps
+    4. Cache frequent calls (if allowed)
+    5. Be mindful of rate limits
+
+🧪 Bonus: Sample API URLs
+| API                    		| URL Example                                              				|
+| ---------------------- 		| --------------------------------------------------------- 			|
+| JSONPlaceholder (Test) 	| `https://jsonplaceholder.typicode.com/posts`              		|
+| OpenWeather            	| `https://api.openweathermap.org/data/2.5/weather?q=Delhi` 	|

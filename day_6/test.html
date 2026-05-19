@@ -1,0 +1,100 @@
+<?php
+session_start();
+$conn = new mysqli("localhost","root","","students");
+if (isset($_POST['login'])) {
+    $id = $_POST["id"];
+    $pass = $_POST["pass"];
+    $stmt = $conn->prepare("SELECT * FROM banking WHERE acc_id = ? AND pass = ?");
+    $stmt->bind_param("ss", $id, $pass); // "ss" means both parameters are strings
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $_SESSION['id'] = $id;
+            $_SESSION['name'] = $row["Name"];
+            $_SESSION['balance'] = $row["Balance"];
+        } 
+    }
+    else {
+        echo "Invalid ID or Password.";
+    }
+    $stmt->close();
+    echo "<h2 style='size:18px' >Welcome " . $_SESSION['name'] ."</h2>" . "<br>" . "<br>";
+
+}
+   if(isset($_POST["amount"])){
+    echo  $_POST["amount"];
+   }
+    if(isset($_POST["Check_balance"])){
+        if(isset($_SESSION["balance"])){
+        echo "Your Current balance is " . $_SESSION['balance'] . "/-";
+        }
+   } 
+  
+    if (isset($_POST["Deposit"])) {
+    if (isset($_SESSION['id'])) {
+        if(isset($_POST["amount"])){
+        
+        $amount = $_POST["amount"];
+        $_SESSION['balance'] += $amount; 
+        $conn->query("UPDATE banking SET Balance = Balance + $amount WHERE acc_id = '{$_SESSION['id']}'");
+        
+        echo "Deposited: $amount. New Balance: " . $_SESSION['balance'];
+    }
+}
+}
+if(isset($_POST["Withdraw"])){
+    if(isset($_SESSION['id'])){
+        $amount = $_POST["amount"];
+        $_SESSION['balance'] -= $amount;
+        $conn->query("UPDATE banking SET Balance = Balance - $amount WHERE acc_id = '{$_SESSION['id']}'");
+        echo "Withdrawn: $amount . New Balance: " . $_SESSION['balance'];
+    }
+}
+if(isset($_POST["exit"])){
+        header("location: login.php");
+    }   
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="banking.css">
+</head>
+<body>
+    <form method="post" action="banking.php">
+
+                <label>Check Balance</label>
+                <button type="submit" name="Check_balance" style="background-color: lavender;">Check_balance</button><br>
+                <label>Exit</label>
+                <button type="exit" name="exit" style="background-color: lavender;">Exit</button><br>
+
+    </form>
+     <form method="POST" action="#">
+        <label>Deposit</label>
+        <button type="submit" name="Deposit">Deposit</button><br>
+        <label>Withdraw</label>
+        <button type="submit" name="Withdraw">Withdraw</button>
+        <label>Amount</label>
+        <input type="number" name="amount" placeholder="Enter Amount"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <!-- Create a java script, only if click on withdraw or deposit then only amount will be asked -->
+    <script>
+        const depositButton = document.querySelector('button[name="Deposit"]');
+        const withdrawButton = document.querySelector('button[name="Withdraw"]');
+        const amountInput = document.querySelector('input[name="amount"]');
+        depositButton.addEventListener('click', () => {
+            amountInput.style.display = 'block';
+        });
+        withdrawButton.addEventListener('click', () => {
+            amountInput.style.display = 'block';
+        });
+        
+    </script>   
+</body>
+</html>
+
