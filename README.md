@@ -2,22 +2,44 @@
 
 Collection of Python examples, exercises, and mini-projects used for learning and practice.
 
-Structure
-- `day_1/` … `day_13/`: daily lessons and exercises
-- `data_analysis/`: data handling and plotting examples
-- `GUI/`, `oop/`: focused topic examples
-- Misc top-level scripts: `colored_hello.py`, `word-freq.py`
+## Repository structure
+- `day_1/` … `day_13/`: daily lessons, exercises and small projects
+- `data_analysis/`: data handling and plotting examples using pandas/matplotlib/seaborn
+- `GUI/`: simple GUI examples (Tkinter)
+- `oop/`: object-oriented examples and patterns
+- Top-level scripts: `colored_hello.py`, `word-freq.py`, etc.
 
-Getting started
-1. Clone the repo:
+## Getting started
+1. Clone the repository:
 
    git clone https://github.com/antickbhattacharjee/Python-Study-Materials.git
-2. Browse the `day_*` folders for examples.
-3. Run scripts with your Python interpreter, e.g. `python day_1/basic_libraries.py`.
+2. Create and activate a virtual environment (recommended):
 
-Notes
-- Many example files are small, self-contained scripts.
-- Consider creating a virtual environment for experiments.
+```bash
+python -m venv .venv
+source .venv/Scripts/activate  # Windows: .venv\Scripts\activate
+```
 
-License
-This is a personal collection of learning materials. No license specified.
+3. Run example scripts. For example:
+
+```bash
+python day_1/basic_libraries.py
+python data_analysis/read_data.py
+```
+
+## Contribution notes
+- Most files are standalone learning examples; editing is welcome.
+- Please avoid committing large data files or generated caches — use `.gitignore`.
+
+## License
+This repository now includes an `LICENSE` (MIT). See `LICENSE` for details.
+
+## Tips
+- Use the `day_*` folders to follow a progressive learning path.
+- If you plan to run data examples, install common data packages:
+
+```bash
+pip install pandas matplotlib seaborn
+```
+
+Thanks for using these materials — tailored for quick practice and demonstrations.
